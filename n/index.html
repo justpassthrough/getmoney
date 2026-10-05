@@ -137,7 +137,7 @@ footer a{color:var(--ink);font-weight:700}
     ch.addEventListener('click',function(){
       chips.forEach(function(x){ x.setAttribute('aria-pressed', x===ch?'true':'false'); });
       var k=ch.dataset.k, shown=0;
-      document.querySelectorAll('.list li').forEach(function(li){ var on=k==='all'||li.firstElementChild.dataset.kind===k; li.hidden=!on; if(on&&li.parentNode.id==='open') shown++; });
+      document.querySelectorAll('.list>li').forEach(function(li){ var on=k==='all'||li.firstElementChild.dataset.kind===k; li.hidden=!on; if(on&&li.parentNode.id==='open') shown++; });
       empty.style.display=shown?'none':'block';
     });
   });
